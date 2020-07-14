@@ -1,6 +1,6 @@
 # Bedium
 # ETHIndiaFellowshipProject(Decentralised Blogging Website)
-<img src="https://github.com/mbcse/Bedium_DecentralisedBlogging/blob/master/screenshots/profile.png" width="800" height="400">
+<img src="https://github.com/mbcse/Bedium_DecentralisedBlogging/blob/master/screenshots/profile.png" width="800" height="500">
 ## About
 This is Decentralised Blogging webiste made on top of ipfs, Defi and Ethereum. Nowdays content creation is centralised and are subject to changes or partiality by the site owners. To support the content creators and provide them with equal rights and profits, **Bedium is made!**
 
@@ -53,6 +53,8 @@ The Best part Is All is Decentralised**
 **Deployed On Kovan Testnet**
 
 **IPFS Accessed through Infura**
+
+
 <img src="https://github.com/mbcse/Bedium_DecentralisedBlogging/blob/master/screenshots/indexpage.png" width="200">
 <img src="https://github.com/mbcse/Bedium_DecentralisedBlogging/blob/master/screenshots/blogcontentpage.png" width="200">
 <img src="https://github.com/mbcse/Bedium_DecentralisedBlogging/blob/master/screenshots/getpaid.png" width="200">
