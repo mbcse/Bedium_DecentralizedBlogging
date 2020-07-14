@@ -45,8 +45,11 @@ The Best part Is All is Decentralised**
 - Make sure You have Metamask installed in browser and set it To **kovan test net**
 - Run **npm start**
 - Head to http://127.0.0.1:5000/
+
 **Hola! Decentralised Blogging started**
+
 **Deployed On Kovan Testnet**
+
 **IPFS Accessed through Infura**
 
 
