@@ -61,11 +61,9 @@ The Best part Is All is Decentralised**
 <img src="https://github.com/mbcse/Bedium_DecentralisedBlogging/blob/master/screenshots/write.png" width="200">
 
 
-**Hola! Decentralised Blogging started**
-
-**Deployed On Kovan Testnet**
-
-**IPFS Accessed through Infura**
+**Hola! Decentralised Blogging started**<br>
+**Deployed On Kovan Testnet**<br>
+**IPFS Accessed through Infura**<br>
 Made By Mohit Bhat(https://www.mbcse.co)
 
 
