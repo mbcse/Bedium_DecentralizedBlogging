@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+        <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+        <script src="web3.min.js"></script>
+        <script src="web3APP.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    </head>
+    <body style="background-image: url('/images/bgg.png');">
+           <div class="Card text-center text-success" style="align-self: center;"><h1><strong>Bedium</strong></h1></div>
+           <!-- / .main-navbar 
+           <div class="main-content-container container-fluid px-4">
+            <!-- Page Header 
+            <div class="page-header row no-gutters py-4">
+              <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+              <!--   <span class="text-uppercase page-subtitle">>Write a Post</span>
+               
+              </div>
+            </div>-->
+            <div class="container" id="statusBar">
+                <h2>Uploading Post</h2>
+                <p id="proStatus">Initiating...</p> 
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" id="progressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                    <span id="barStatusValue">0%</span>
+                  </div>
+                </div>
+              </div>
+            <h3 class="page-title text-center">Add New Post</h3>
+            <!-- End Page Header -->
+            <div class="row">
+              <div class="col-lg-12 col-md-12">
+                <!-- Add New Post Form -->
+                <div class="card card-small mb-3">
+                  <div class="card-body bg-primary" >
+                    <form   enctype="multipart/form-data" class="add-new-post">
+                     <strong>Title:</strong> &nbsp; <input class="form-control form-control-lg mb-3" type="text" placeholder="Your Post Title" name="title" id="title">
+                     <span class="text-warning"><strong>Add Featured Image</strong></span>
+                      <input type="file" name="image" id="image" ><br>
+                      
+                      <strong>Content(MarkDown Supported):</strong> <input type="text" name="" id="tarea">
+
+                     
+                    </form>
+                    <button class="btn-primary btn-lg" id="post" >Post</button>
+                  </div>
+                </div>
+                <!-- / Add New Post Form -->
+              </div>
+
+                
+              </div>
+            </div>
+          </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        
+        
+        
+        
+        
+        <script>
+          var simplemde = new SimpleMDE({ element: document.getElementById("tarea") });
+          // setInterval(()=>{
+          //     console.log(simplemde.value());
+          // },3000);
+
+//*********************************************************************************************************************            
+
+          var barContainer=document.getElementById('statusBar');
+          barContainer.style.display="none";
+
+          var statusText=document.getElementById('proStatus');
+          var probarDiv=document.getElementById('progressBar');
+          var statusShowValue=document.getElementById('barStatusValue');
+          var statusValue=0;
+
+          var putStatusValue=function(val,text){
+              proStatus.innerHTML=text;
+              statusShowValue.innerHTML=val+"%";
+              probarDiv.style.width=val+"%";  
+          }
+          var progressInterval;
+          var updatebar=function(){
+                          if(statusValue>=0 && statusValue<10){
+                          putStatusValue(statusValue, "Connecting To Server...");
+                          }
+                          else if(statusValue>=10 && statusValue <60){
+                              putStatusValue(statusValue, "Sending File to Ipfs and getting Hash....");
+                          } 
+
+                          else if(statusValue>=60 && statusValue <80){
+                              putStatusValue(statusValue, "Connecting To Ethereum Netwrok....");
+                          }
+
+                          else if(statusValue>=80 && statusValue <=99){
+                              putStatusValue(statusValue,"Uploading to Blockchain....");
+                          }
+                          else{
+                              putStatusValue(100,"Done! Post Uploaded Successfully");
+                              clearInterval(progressInterval);
+                          }
+
+                          statusValue++;
+
+          }
+
+          var startUpload=function(){
+                  barContainer.style.display="block";            
+                  progressInterval = setInterval(updatebar, 2000);
+                  
+              }
+//********************************************************************************************************************************   
+      </script>
+
+        <script>
+document.getElementById('post').addEventListener("click", ()=>{
+       startUpload();
+       var title=document.getElementById('title').value;
+       var fd = new FormData();
+        var files = $('#image')[0].files[0];
+        fd.append('file',files);
+        fd.append('markdown',simplemde.value());
+        
+        $.ajax({
+            url: '/gethash',
+            type: 'post',
+            data: fd,
+            contentType: false,
+            processData: false,
+            success: function(response){
+                statusValue=65;
+                putStatusValue(statusValue,"Connecting To Ethereum Netwrok");
+                console.log(response);
+                if(response.markdownHash != "" && response.imageHash!=""){
+                    
+                    bediumContract.methods.setNewPost(response.markdownHash, response.imageHash, title).send({from:userAccount}, (err,transactionHash)=>{
+                        if(err){
+                            console.log(err);
+                        }
+                        statusValue=88;
+                        putStatusValue(statusValue,"Updating Blockchain");
+                        console.log(transactionHash);
+                    }).on('receipt',(rc)=>{
+                      statusValue=100;
+                      putStatusValue(statusValue,"Done! Post Uploaded Successfully");
+                    });
+
+                    
+                }else{
+                    alert('Something Went wrong');
+                }
+            },
+        });
+});
+             
+    
+
+
+        </script>
+    </body>
+</html>

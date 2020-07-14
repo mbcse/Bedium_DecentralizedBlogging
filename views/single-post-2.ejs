@@ -1,0 +1,644 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Bedium</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+
+
+	<!-- Font -->
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+	<!-- Stylesheets -->
+
+	<link href="/common-css/bootstrap.css" rel="stylesheet">
+
+	<link href="/common-css/ionicons.css" rel="stylesheet">
+
+
+	<link href="/single-post-2/css/styles.css" rel="stylesheet">
+
+	<link href="/single-post-2/css/responsive.css" rel="stylesheet">
+	<script src="/web3.min.js"></script>
+	<script src="/web3APP.js"></script>
+</head>
+<body >
+
+
+	  
+	  <!-- Modal -->
+	  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">Notice</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+				<h5 id="message" >You don't have a subscription, Click to pay 1 dai to get subscription for 30 days</h5>
+				<div class="container" id="statusBar">
+					<h2 id="headingmessage">Transacting</h2><br>
+					There will be series of Metamask Popup's
+					<p id="proStatus">Starting</p> 
+					<div class="progress">
+					  <div class="progress-bar progress-bar-striped progress-bar-animated" id="progressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+						<span id="barStatusValue">0%</span>
+					  </div>
+					</div>
+				  </div>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cancel" style="display: block;">Cancel</button>
+			  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="display: none;" id="close">close</button>
+			  <button type="button" class="btn btn-primary" id="subscribe" style="display: block;">subscribe</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+        <!-- Modal End -->
+	<header>
+		<div class="container-fluid position-relative no-side-padding">
+
+			<a href="/" class="logo"><strong>Bedium</strong></a>
+
+			<div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
+
+			<ul class="main-menu visible-on-click" id="main-menu">
+				<li><a href="/">Home</a></li>
+				<li><a href="/">Categories</a></li>
+				<li><a href="/">Features</a></li>
+			</ul><!-- main-menu -->
+
+			<div class="src-area">
+				<form>
+					<button class="src-btn" type="submit"><i class="ion-ios-search-strong"></i></button>
+					<input class="src-input" type="text" placeholder="Type of search">
+				</form>
+			</div>
+
+		</div><!-- conatiner -->
+	</header>
+
+	<div class="slider" id="image" style="background-repeat: no-repeat;background-size: 100% 100%; ">
+
+	</div><!-- slider -->
+
+	<section class="post-area">
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-lg-1 col-md-0"></div>
+				<div class="col-lg-10 col-md-12">
+
+					<div class="main-post">
+
+						<div class="post-top-area">
+
+							<h5 class="pre-title"></h5>
+
+							<h3 class="title" ><a href="#"><b id="title">Loading.....</b></a></h3>
+
+							<div class="post-info">
+
+								<div class="left-area">
+									<a class="avatar" id="seeprofilelink" href=""><img  src="/images/A.jfif" id="profileImage" alt="Profile Image"></a>
+								</div>
+
+								<div class="middle-area">
+									<a class="name" href="#"><b id="authorname"></b></a>
+									<h6 id="authoraddress"></h6>
+								</div>
+
+							</div ><!-- post-info -->
+
+					          <span id="markcontent">
+
+							  </span>
+
+						</div><!-- post-top-area 
+
+						
+
+						<div class="post-bottom-area">
+
+							<p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+							ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+							nulla pariatur. Excepteur sint
+							occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>-->
+
+							<ul class="tags">
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+							</ul>
+
+							<div class="post-icons-area">
+								<ul class="post-icons">
+									<li><a href="#likess" id="likebtn"><i class="ion-heart"></i><span id="likebtnvalue">0</span></a></li>
+									<li><a href="#"><i class="ion-chatbubble"></i>6</a></li>
+									<li><a href="#"><i class="ion-eye"></i>138</a></li>
+								</ul>
+
+								<ul class="icons">
+									<li>SHARE : </li>
+									<li><a href="#"><i class="ion-social-facebook"></i></a></li>
+									<li><a href="#"><i class="ion-social-twitter"></i></a></li>
+									<li><a href="#"><i class="ion-social-pinterest"></i></a></li>
+								</ul>
+							</div>
+
+					
+
+						</div><!-- post-bottom-area -->
+
+					</div><!-- main-post -->
+				</div><!-- col-lg-8 col-md-12 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- post-area -->
+
+
+	<section class="recomended-area section">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-4 col-md-6">
+					<div class="card h-100">
+						<div class="single-post post-style-1">
+
+							<div class="blog-image"><img src="/images/alex-lambley-205711.jpg" alt="Blog Image"></div>
+
+							<a class="avatar" href="#"><img src="/images/icons8-team-355979.jpg" alt="Profile Image"></a>
+
+							<div class="blog-info">
+
+								<h4 class="title"><a href="#"><b>How Did Van Gogh's Turbulent Mind Depict One of the Most Complex
+								Concepts in Physics?</b></a></h4>
+
+								<ul class="post-footer">
+									<li><a href="#"><i class="ion-heart"></i>57</a></li>
+									<li><a href="#"><i class="ion-chatbubble"></i>6</a></li>
+									<li><a href="#"><i class="ion-eye"></i>138</a></li>
+								</ul>
+
+							</div><!-- blog-info -->
+						</div><!-- single-post -->
+					</div><!-- card -->
+				</div><!-- col-md-6 col-sm-12 -->
+
+				<div class="col-lg-4 col-md-6">
+					<div class="card h-100">
+						<div class="single-post post-style-1">
+
+							<div class="blog-image"><img src="/images/caroline-veronez-165944.jpg" alt="Blog Image"></div>
+
+							<a class="avatar" href="#"><img src="/images/icons8-team-355979.jpg" alt="Profile Image"></a>
+
+							<div class="blog-info">
+								<h4 class="title"><a href="#"><b>How Did Van Gogh's Turbulent Mind Depict One of the Most Complex
+									Concepts in Physics?</b></a></h4>
+
+								<ul class="post-footer">
+									<li><a href="#"><i class="ion-heart"></i>57</a></li>
+									<li><a href="#"><i class="ion-chatbubble"></i>6</a></li>
+									<li><a href="#"><i class="ion-eye"></i>138</a></li>
+								</ul>
+							</div><!-- blog-info -->
+
+						</div><!-- single-post -->
+
+					</div><!-- card -->
+				</div><!-- col-md-6 col-sm-12 -->
+
+				<div class="col-lg-4 col-md-6">
+					<div class="card h-100">
+						<div class="single-post post-style-1">
+
+							<div class="blog-image"><img src="/images/marion-michele-330691.jpg" alt="Blog Image"></div>
+
+							<a class="avatar" href="#"><img src="/images/icons8-team-355979.jpg" alt="Profile Image"></a>
+
+							<div class="blog-info">
+								<h4 class="title"><a href="#"><b>How Did Van Gogh's Turbulent Mind Depict One of the Most Complex
+									Concepts in Physics?</b></a></h4>
+
+								<ul class="post-footer">
+									<li><a href="#"><i class="ion-heart"></i>57</a></li>
+									<li><a href="#"><i class="ion-chatbubble"></i>6</a></li>
+									<li><a href="#"><i class="ion-eye"></i>138</a></li>
+								</ul>
+							</div><!-- blog-info -->
+
+						</div><!-- single-post -->
+
+					</div><!-- card -->
+				</div><!-- col-md-6 col-sm-12 -->
+
+			</div><!-- row -->
+
+		</div><!-- container -->
+	</section>
+
+	<section class="comment-section center-text">
+		<div class="container">
+			<h4><b>POST COMMENT</b></h4>
+			<div class="row">
+
+				<div class="col-lg-2 col-md-0"></div>
+
+				<div class="col-lg-8 col-md-12">
+					<div class="comment-form">
+						<form method="post">
+							<div class="row">
+
+								<div class="col-sm-6">
+									<input type="text" aria-required="true" name="contact-form-name" class="form-control"
+										placeholder="Enter your name" aria-invalid="true" required >
+								</div><!-- col-sm-6 -->
+								<div class="col-sm-6">
+									<input type="email" aria-required="true" name="contact-form-email" class="form-control"
+										placeholder="Enter your email" aria-invalid="true" required>
+								</div><!-- col-sm-6 -->
+
+								<div class="col-sm-12">
+									<textarea name="contact-form-message" rows="2" class="text-area-messge form-control"
+										placeholder="Enter your comment" aria-required="true" aria-invalid="false"></textarea >
+								</div><!-- col-sm-12 -->
+								<div class="col-sm-12">
+									<button class="submit-btn" type="submit" id="form-submit"><b>POST COMMENT</b></button>
+								</div><!-- col-sm-12 -->
+
+							</div><!-- row -->
+						</form>
+					</div><!-- comment-form -->
+
+					<h4><b>COMMENTS(12)</b></h4>
+
+					<div class="commnets-area text-left">
+
+						<div class="comment">
+
+							<div class="post-info">
+
+								<div class="left-area">
+									<a class="avatar" href="#"><img src="/images/avatar-1-120x120.jpg" alt="Profile Image"></a>
+								</div>
+
+								<div class="middle-area">
+									<a class="name" href="#"><b>Katy Liu</b></a>
+									<h6 class="date">on Sep 29, 2017 at 9:48 am</h6>
+								</div>
+
+								<div class="right-area">
+									<h5 class="reply-btn" ><a href="#"><b>REPLY</b></a></h5>
+								</div>
+
+							</div><!-- post-info -->
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+								ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+								Ut enim ad minim veniam</p>
+
+						</div>
+
+						<div class="comment">
+							<h5 class="reply-for">Reply for <a href="#"><b>Katy Lui</b></a></h5>
+
+							<div class="post-info">
+
+								<div class="left-area">
+									<a class="avatar" href="#"><img src="/images/avatar-1-120x120.jpg" alt="Profile Image"></a>
+								</div>
+
+								<div class="middle-area">
+									<a class="name" href="#"><b>Katy Liu</b></a>
+									<h6 class="date">on Sep 29, 2017 at 9:48 am</h6>
+								</div>
+
+								<div class="right-area">
+									<h5 class="reply-btn" ><a href="#"><b>REPLY</b></a></h5>
+								</div>
+
+							</div><!-- post-info -->
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+								ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+								Ut enim ad minim veniam</p>
+
+						</div>
+
+					</div><!-- commnets-area -->
+
+					<div class="commnets-area text-left">
+
+						<div class="comment">
+
+							<div class="post-info">
+
+								<div class="left-area">
+									<a class="avatar" href="#"><img src="/images/avatar-1-120x120.jpg" alt="Profile Image"></a>
+								</div>
+
+								<div class="middle-area">
+									<a class="name" href="#"><b>Katy Liu</b></a>
+									<h6 class="date">on Sep 29, 2017 at 9:48 am</h6>
+								</div>
+
+								<div class="right-area">
+									<h5 class="reply-btn" ><a href="#"><b>REPLY</b></a></h5>
+								</div>
+
+							</div><!-- post-info -->
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+								ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+								Ut enim ad minim veniam</p>
+
+						</div>
+
+					</div><!-- commnets-area -->
+
+					<a class="more-comment-btn" href="#"><b>VIEW MORE COMMENTS</a>
+
+				</div><!-- col-lg-8 col-md-12 -->
+
+			</div><!-- row -->
+
+		</div><!-- container -->
+	</section>
+
+	<footer>
+
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-4 col-md-6">
+					<div class="footer-section">
+
+						<a class="logo" href="#"></a>
+						<p class="copyright">Bedium 2020. All rights reserved.</p>
+						<p class="copyright">Designed by <a href="/" target="_blank">Blockchain</a></p>
+						<ul class="icons">
+							<li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>
+							<li><a href="#"><i class="ion-social-twitter-outline"></i></a></li>
+							<li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+							<li><a href="#"><i class="ion-social-vimeo-outline"></i></a></li>
+							<li><a href="#"><i class="ion-social-pinterest-outline"></i></a></li>
+						</ul>
+
+					</div><!-- footer-section -->
+				</div><!-- col-lg-4 col-md-6 -->
+
+				<div class="col-lg-4 col-md-6">
+					<div class="footer-section">
+						<h4 class="title"><b>CATAGORIES</b></h4>
+						<ul>
+							<li><a href="#">BEAUTY</a></li>
+							<li><a href="#">HEALTH</a></li>
+							<li><a href="#">MUSIC</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">SPORT</a></li>
+							<li><a href="#">DESIGN</a></li>
+							<li><a href="#">TRAVEL</a></li>
+							<li><a href="#">BLOCKCHAIN</a></li>
+							<li><a href="#">TECH</a></li>
+						</ul>
+					</div><!-- footer-section -->
+				</div><!-- col-lg-4 col-md-6 -->
+
+				<div class="col-lg-4 col-md-6">
+					<div class="footer-section">
+
+						<h4 class="title"><b>SUBSCRIBE</b></h4>
+						<div class="input-area">
+							<form>
+								<input class="email-input" type="text" placeholder="Enter your email">
+								<button class="submit-btn" type="submit"><i class="icon ion-ios-email-outline"></i></button>
+							</form>
+						</div>
+
+					</div><!-- footer-section -->
+				</div><!-- col-lg-4 col-md-6 -->
+
+			</div><!-- row -->
+		</div><!-- container -->
+	</footer>
+
+
+	<!-- SCIPTS -->
+
+	<script src="/common-js/jquery-3.1.1.min.js"></script>
+
+	<script src="/common-js/tether.min.js"></script>
+
+	<script src="/common-js/bootstrap.js"></script>
+
+	<script src="/common-js/scripts.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	
+	
+	<script>
+
+	var messagediv=document.getElementById('message');
+	var barContainer=document.getElementById('statusBar');
+            barContainer.style.display="none";
+
+            var statusText=document.getElementById('proStatus');
+            var probarDiv=document.getElementById('progressBar');
+            var statusShowValue=document.getElementById('barStatusValue');
+            var statusValue=0;
+
+            var putStatusValue=function(val,text){
+                proStatus.innerHTML=text;
+                statusShowValue.innerHTML=val+"%";
+                probarDiv.style.width=val+"%";  
+            }
+            var progressInterval;
+            var updatebar=function(){
+                            if(statusValue>=0 && statusValue<10){
+                            putStatusValue(statusValue, "Please Approve Spending of 1 Dai");
+                            }
+                            else if(statusValue>=10 && statusValue <40){
+                                putStatusValue(statusValue, "Processing");
+                            } 
+
+                            else if(statusValue>=40 && statusValue <60){
+                                putStatusValue(statusValue, "Sending Dai, Please Approve");
+							}
+							else if(statusValue>=60 && statusValue <80){
+                                putStatusValue(statusValue, "Thankyou! Transfering Dai");
+                            }
+
+                            else if(statusValue>=80 && statusValue <=95){
+                                putStatusValue(statusValue,"Completing Transaction, Please Approve");
+                            }
+                            else{
+                                //putStatusValue(100,"Done! Thankyou For Subscribing!!");
+                                clearInterval(progressInterval);
+                            }
+
+                            statusValue++;
+
+            }
+
+            var startUpload=function(){
+					barContainer.style.display="block";   
+					messagediv.style.display="none";           
+                    progressInterval = setInterval(updatebar, 1500);
+                    
+                }
+
+//***************************************************************************************************************************
+	window.onload=function(){
+
+
+	console.log(<%=content%>);
+	var id=<%=id%>;
+	var postAuthorAddress;
+
+	var authorname=document.getElementById('authorname');
+	var authoraddress=document.getElementById('authoraddress');
+
+	var imageDOM=document.getElementsByClassName('slider');
+	console.log(imageDOM);
+	var contentDOM=document.getElementById('markcontent');
+	var titleDOM=document.getElementById('title');
+	bediumContract.methods.checkSubscribed().call({from:userAccount},(err,status)=>{
+		    
+			bediumContract.methods.CheckAuthorOwner(id).call({from:userAccount},(err,resu)=>{
+				console.log(resu);
+					console.log(status);
+					if(status || resu){
+						bediumContract.methods.getPost(id).call({from:userAccount},(err,postDetails)=>{
+							
+							contentDOM.innerHTML=marked(<%=content%>);
+							imageDOM[0].style.backgroundImage='url("https://gateway.ipfs.io/ipfs/'+postDetails[3]+'")';
+							titleDOM.innerHTML=postDetails[4];
+							authoraddress.innerHTML=postDetails[1];
+							postAuthorAddress=postDetails[1];
+							document.getElementById('likebtnvalue').innerHTML=httpGetLikes("/getlikecount/"+postDetails[1]);
+							authorname.innerHTML=postDetails[5];
+							document.getElementById('seeprofilelink').href="/seeprofile?address="+postDetails[1];   
+							bediumContract.methods.getUserDetails(postDetails[1]).call({from:userAccount},(err,user)=>{
+								document.getElementById('profileImage').src="https://gateway.ipfs.io/ipfs/"+user[1]; 
+								           
+							});
+
+							
+						});
+					}
+					else{
+						$('#exampleModal').modal('show');
+						
+						document.getElementById('subscribe').addEventListener('click',()=>{
+														
+							startUpload();
+							daiContract.methods.approve(bediumAddress,'1000000000000000000').send({from:userAccount},(err,txh)=>{
+								if(err)
+									alert("Something went wrong Try Again");  
+								statusValue=11;
+								putStatusValue(statusValue,"Thankyou!");	  
+							    }).on('receipt',(rc)=>{
+									                statusValue=41;
+								                    putStatusValue(statusValue,"Sending Dai, Please Approve");
+												bediumContract.methods.transferDai('1000000000000000000').send({from:userAccount},(err,txh)=>{
+													if(err)
+														alert("Something went wrong Try Again");
+														statusValue=60;
+								                        putStatusValue(statusValue,"Thankyou!");	
+												    }).on('receipt',(rc)=>{		
+														statusValue=80;
+														putStatusValue(statusValue,"Thankyou!");
+														statusValue=100;
+															putStatusValue(statusValue,"Done! Thankyou For Subscribing!!");
+															
+															bediumContract.methods.getPost(id).call({from:userAccount},(err,postDetails)=>{
+													
+																			contentDOM.innerHTML=marked(<%=content%>);
+																			imageDOM.src="https://gateway.ipfs.io/ipfs/"+postDetails[3];
+																			titleDOM.innerHTML=postDetails[4];
+																			authoraddress.innerHTML=postDetails[1];
+																			authorname.innerHTML=postDetails[5];
+																			postAuthorAddress=postDetails[1];
+																			document.getElementById('likebtnvalue').innerHTML=httpGetLikes("/getlikecount/"+postDetails[1]);
+																			document.getElementById('seeprofilelink').href="/seeprofile?address="+postDetails[1];  
+																			document.getElementById('headingmessage').innerHTML="Subscribed!";
+																			document.getElementById('close').style.display="block";
+																			document.getElementById('cancel').style.display="none";
+																			document.getElementById('subscribe').style.display="none";
+																			bediumContract.methods.getUserDetails(postDetails[1]).call({from:userAccount},(err,user)=>{
+																				document.getElementById('profileImage').src="https://gateway.ipfs.io/ipfs/"+user[1];               
+																			});
+
+																			
+															});
+														// bediumContract.methods.transferToCompound('1000000000000000000').send({from:userAccount},(err,txh)=>{
+														// statusValue=96;
+								                        // putStatusValue(statusValue,"Thankyou! Subscribing You! Please wait...");
+														// }).on('receipt',(rc)=>{
+          
+
+														// });
+													
+													});
+								});
+
+						});
+
+
+
+						document.getElementById('cancel').addEventListener('click',()=>{
+							window.location.href = "/";
+                        });
+	
+					}
+
+			});
+			
+	});
+
+    
+    document.getElementById('likebtn').addEventListener('click',()=>{
+	  $.ajax({
+		  url:"/like/"+postAuthorAddress,
+		  type:"get",
+		  success:(response)=>{
+			  if(response.status){
+				document.getElementById('likebtnvalue').innerHTML=parseInt(document.getElementById('likebtnvalue').innerHTML)+1;
+			  }
+			  else
+			  {
+				 alert("Something went wrong"); 
+			  }
+
+		  }
+
+	  });
+		
+	});
+
+
+
+
+
+}
+
+function httpGetLikes(theUrl){
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+			xmlHttp.send( null );
+			return JSON.parse(xmlHttp.responseText).likes;
+	}
+	</script>
+
+</body>
+</html>
