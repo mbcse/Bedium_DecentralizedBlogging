@@ -1,4 +1,5 @@
-# Bedium_ETHIndiaFellowshipProject(Decentralised Blogging Website)
+# Bedium
+# ETHIndiaFellowshipProject(Decentralised Blogging Website)
 ## About
 This is Decentralised Blogging webiste made on top of ipfs, Defi and Ethereum. Nowdays content creation is centralised and are subject to changes or partiality by the site owners. To support the content creators and provide them with equal rights and profits, **Bedium is made!**
 
