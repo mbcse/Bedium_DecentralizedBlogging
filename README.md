@@ -36,3 +36,18 @@ The Best part Is All is Decentralised**
  ### Other features
    - You can like blog's
    - You can see the Author Profile and all his/her Blogs
+   
+## To Run The code
+- Clone the Repo
+- Go to porject Directory and open Cmd
+- Run **npm install**
+- Use Xamp and import the sql File(Likes are first stored in database and then Uploaded to Ethereum)
+- Make sure You have Metamask installed in browser and set it To **kovan test net**
+- Run **npm start**
+- Head to http://127.0.0.1:5000/
+**Hola! Decentralised Blogging started**
+**Deployed On Kovan Testnet**
+**IPFS Accessed through Infura**
+
+
+
