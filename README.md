@@ -63,6 +63,7 @@ The Best part Is All is Decentralized**
 
 **Hola! Decentralized Blogging started**<br>
 **Deployed On Kovan Testnet**<br>
+**LIVE WEBSITE LINK: https://bedium.herokuapp.com/**<br>
 **IPFS Accessed through Infura**<br>
 Made By Mohit Bhat(https://www.mbcse.co)
 
