@@ -17,10 +17,10 @@ var con = mysql.createConnection({
 });
 
 //Database Connection
-con.connect(function (err) {
-  if (err) throw err;
-  console.log("Database Connected!");
-});
+// con.connect(function (err) {
+//   if (err) throw err;
+//   console.log("Database Connected!");
+// });
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
